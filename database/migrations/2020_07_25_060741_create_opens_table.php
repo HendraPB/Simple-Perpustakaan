@@ -15,8 +15,8 @@ class CreateOpensTable extends Migration {
 		Schema::create('opens', function(Blueprint $table)
 		{
 			$table->bigInteger('id', true);
-			$table->bigInteger('role_id')->index('role_id');
-			$table->bigInteger('menu_id')->index('menu_id');
+			$table->bigInteger('role_id')->index('opens_role_id');
+			$table->bigInteger('menu_id')->index('opens_menu_id');
 			$table->timestamps();
 			$table->softDeletes();
 		});
