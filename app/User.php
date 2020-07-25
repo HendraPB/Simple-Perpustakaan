@@ -47,12 +47,12 @@ class User extends Authenticatable
         return $this->role->menu()->where('name', $menu)->whereNull('opens.deleted_at')->first() ?: false;
     }
 
-    // protected static function boot()
-    // {
-    //     parent::boot();
+    protected static function boot()
+    {
+        parent::boot();
 
-    //     static::deleted(function ($query) {
-    //         $query->rents()->delete();
-    //     });
-    // }
+        static::deleted(function ($query) {
+            $query->rents()->delete();
+        });
+    }
 }

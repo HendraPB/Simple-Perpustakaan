@@ -22,12 +22,12 @@ class Role extends Model
         return $this->hasMany('App\User');
     }
 
-    // protected static function boot()
-    // {
-    //     parent::boot();
+    protected static function boot()
+    {
+        parent::boot();
 
-    //     static::deleted(function ($query) {
-    //         $query->users()->delete();
-    //     });
-    // }
+        static::deleted(function ($query) {
+            $query->users()->delete();
+        });
+    }
 }

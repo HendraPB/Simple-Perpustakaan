@@ -17,12 +17,12 @@ class Book extends Model
         return $this->hasMany('App\Rent');
     }
 
-    // protected static function boot()
-    // {
-    //     parent::boot();
+    protected static function boot()
+    {
+        parent::boot();
 
-    //     static::deleted(function ($query) {
-    //         $query->rents()->delete();
-    //     });
-    // }
+        static::deleted(function ($query) {
+            $query->rents()->delete();
+        });
+    }
 }
