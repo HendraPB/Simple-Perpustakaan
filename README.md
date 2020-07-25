@@ -8,7 +8,10 @@ Made for tests, simple book lending web application use Laravel framework which 
 git clone https://github.com/HendraPB/Simple-Perpustakaan.git
 
 # change your directory to project
-cd vue-router-laravel
+cd Simple-Perpustakaan
+
+# configure installation
+cp env.example .env
 
 # install laravel dependencies
 composer install
