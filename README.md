@@ -11,7 +11,7 @@ git clone https://github.com/HendraPB/Simple-Perpustakaan.git
 cd Simple-Perpustakaan
 
 # configure installation
-cp env.example .env
+cp .env.example .env
 
 # install laravel dependencies
 composer install
